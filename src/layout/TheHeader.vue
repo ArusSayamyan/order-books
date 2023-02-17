@@ -1,5 +1,5 @@
 <template>
-<base-wrapper>
+<base-wrapper isBlue>
   <header class="header">
     <div class="header__infoWrapper">
       <div class="header__infoBlock">

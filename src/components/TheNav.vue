@@ -1,5 +1,5 @@
 <template>
-  <base-wrapper>
+  <base-wrapper isBlue>
     <nav class="nav">
       <div class="nav__wrapper">
         <div class="nav__logoWrapper">
