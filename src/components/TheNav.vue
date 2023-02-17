@@ -105,6 +105,5 @@ export default {
   &__addProduct {
     cursor: pointer;
   }
-
 }
 </style>
