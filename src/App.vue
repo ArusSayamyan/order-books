@@ -1,15 +1,20 @@
 <template>
   <Nav></Nav>
-  <router-view></router-view>
+  <router-view>
+    <the-header>
+    </the-header>
+  </router-view>
 </template>
 
 <script>
 import Nav from './components/TheNav.vue'
+import TheHeader from './layout/TheHeader.vue'
 
 export default {
   name: 'App',
   components: {
-    Nav
+    Nav,
+    TheHeader
   }
 }
 </script>
