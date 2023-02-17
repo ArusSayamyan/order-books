@@ -1,12 +1,20 @@
 <template>
-  <base-wrapper>
-    <div>home</div>
-  </base-wrapper>
+  <the-header></the-header>
+  <book-list></book-list>
+  <about-author></about-author>
 </template>
 
 <script>
+import TheHeader from '../../layout/TheHeader.vue'
+import BookList from '../../components/BookList.vue'
+import AboutAuthor from '../../components/AboutAuthor.vue'
 export default {
-  name: "HomePage"
+  name: "HomePage",
+  components: {
+    TheHeader,
+    BookList,
+    AboutAuthor
+  }
 }
 </script>
 
