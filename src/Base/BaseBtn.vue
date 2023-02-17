@@ -1,5 +1,5 @@
 <template>
-  <button class="orderBtn">{{ btnTitle }}</button>
+  <button class="orderBtn" :class="{withBg: withBg}">{{ btnTitle }}</button>
 </template>
 
 <script>
@@ -9,6 +9,10 @@ export default {
     btnTitle: {
       type: String,
       required: true
+    },
+    withBg: {
+      type: Boolean,
+      required: false
     }
   }
 }
@@ -16,7 +20,7 @@ export default {
 
 <style scoped lang="scss">
 .orderBtn {
-  background: #FFCA42;
+  background: none;
   border: 2px solid #FFCA42;
   width: 222px;
   padding: 18px 0;
@@ -26,6 +30,9 @@ export default {
   &:hover {
     opacity: 0.8;
   }
+}
 
+.withBg {
+  background: #FFCA42;
 }
 </style>

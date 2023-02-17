@@ -25,7 +25,7 @@
           <li class="nav__link">Contact Link</li>
           <li class="nav__addProduct"><img src="../assets/bug.svg" alt=""></li>
           <li>
-            <base-btn btnTitle="Order Today"></base-btn>
+            <base-btn btnTitle="Order Today" withBg></base-btn>
           </li>
         </ul>
     </nav>
@@ -105,5 +105,6 @@ export default {
   &__addProduct {
     cursor: pointer;
   }
+
 }
 </style>

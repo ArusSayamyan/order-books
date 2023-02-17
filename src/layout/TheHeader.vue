@@ -9,7 +9,7 @@
       <h2 class="header__title">Your Books From The Best Writer.</h2>
       <p class="header__desc">We believe that reading books are essential to a healthy culture. They’re where authors can connect with readers.</p>
       <div class="header__links">
-        <base-btn btnTitle="Order Today"></base-btn>
+        <base-btn btnTitle="Order Today" withBg></base-btn>
         <a href="#" class="header__readBook">Read Free Demo</a>
       </div>
       <ul class="header__info">
