@@ -1,5 +1,5 @@
 <template>
-  <button class="orderBtn" :class="{withBg: withBg}">{{ btnTitle }}</button>
+  <button class="orderBtn" :class="{withBg: withBg, centered:centered}">{{ btnTitle }}</button>
 </template>
 
 <script>
@@ -11,6 +11,10 @@ export default {
       required: true
     },
     withBg: {
+      type: Boolean,
+      required: false
+    },
+    centered: {
       type: Boolean,
       required: false
     }
@@ -34,5 +38,9 @@ export default {
 
 .withBg {
   background: #FFCA42;
+}
+.centered {
+  margin: 0 auto;
+  display: block;
 }
 </style>

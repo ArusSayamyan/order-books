@@ -2,6 +2,7 @@
   <the-header></the-header>
   <book-list></book-list>
   <about-author></about-author>
+  <order-form></order-form>
 </template>
 
 <script>
