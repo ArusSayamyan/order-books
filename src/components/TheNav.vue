@@ -25,7 +25,7 @@
           <li class="nav__link">Contact Link</li>
           <li class="nav__addProduct"><img src="../assets/bug.svg" alt=""></li>
           <li>
-            <base-btn btnTitle="Order Today" withBg></base-btn>
+            <base-btn btnTitle="Order Today" withBg @click="makeShownForm"></base-btn>
           </li>
         </ul>
     </nav>
@@ -33,8 +33,23 @@
 </template>
 
 <script>
+import { ref } from 'vue'
+import {useStore} from "vuex";
+
 export default {
   name: 'TheNav',
+  setup() {
+    const store = useStore()
+    const isShown = ref(false)
+    const makeShownForm = function() {
+     store.commit('makeShown', true)
+      console.log(store.state.isShown)
+    }
+    return {
+      isShown,
+      makeShownForm
+    }
+  }
 }
 </script>
 
