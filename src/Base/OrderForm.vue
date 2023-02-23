@@ -38,9 +38,12 @@ export default {
       return store.getters.isShown
     })
     const setOrder = function() {
-      console.log(userName.value)
-      console.log(lastName.value)
-      console.log(phoneNumber.value)
+      store.dispatch('createOrder',{
+        id: new Date().toISOString(),
+        uName: userName,
+        lName: lastName,
+        phone: phoneNumber
+      })
       store.commit('makeShown', false)
     }
 
@@ -80,6 +83,7 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 8px;
   }
 
   &__inputWrapper {
@@ -94,6 +98,10 @@ export default {
 
   &__userInput {
     padding: 10px 5px;
+    background: #cbb18f38;
+    border: unset;
+    border-radius: 5px;
+    outline: unset;
   }
 
   &__close {
