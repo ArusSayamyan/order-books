@@ -3,8 +3,10 @@
     <nav class="nav">
       <div class="nav__wrapper">
         <div class="nav__logoWrapper">
-          <img src="../assets/logo.svg" alt="navLogo" class="nav__logo">
-          <span class="nav__name">Pages</span>
+          <router-link to="/home" class="nav__homeLink">
+          <img src="../assets/logo.svg" alt="navLogo" class="nav__logo"></router-link>
+          <router-link to="/home" class="nav__homeLink">
+            <span class="nav__name">Pages</span></router-link>
         </div>
         <div class="nav__socialLinkContent">
           <a href="#" class="nav__socialLink">
@@ -57,6 +59,10 @@ export default {
     justify-content: space-between;
     align-items: center;
     margin-right: 37px;
+  }
+
+  &__homeLink {
+    text-decoration: none;
   }
 
   &__logo {
