@@ -64,18 +64,15 @@ const store = createStore({
                 throw error;
             }
 
-            context.commit('addNewOrder', newOrder);
+             context.commit('addNewOrder', newOrder);
+             await router.push('/success')
+
         }
     },
     getters: {
         isShown(state) {
             return state.isShown
         },
-        // cardId(state) {
-        //     state.cards.forEach(card => {
-        //         return  card.id
-        //     })
-        // }
         cards(state) {
             return state.cards
         }

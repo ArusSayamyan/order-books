@@ -5,6 +5,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from "./pages/home/HomePage";
 import AboutPage from "./pages/about/AboutPage";
 import MainBooks from './pages/books/MainBooks'
+import SuccessPage from "./components/SuccessPage";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -24,6 +25,10 @@ const router = createRouter({
         {
             path: '/books',
             component: MainBooks
+        },
+        {
+            path: '/success',
+            component: SuccessPage
         },
     ]
 })

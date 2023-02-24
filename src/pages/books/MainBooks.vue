@@ -1,11 +1,13 @@
 <template>
-  <div class="mainBooks">
-    <h1 class="mainBooks__title">Author books</h1>
-    <div class="mainBooks__allBooks">
-      <book-card/>
-      <order-form/>
+  <base-wrapper>
+    <div class="mainBooks">
+      <h1 class="mainBooks__title">Author books</h1>
+      <div class="mainBooks__allBooks">
+        <book-card/>
+        <order-form/>
+      </div>
     </div>
-  </div>
+  </base-wrapper>
 </template>
 
 <script>
@@ -23,8 +25,9 @@ export default {
 
   &__allBooks {
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   &__title {
