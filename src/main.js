@@ -7,6 +7,7 @@ import BaseBtn from './Base/BaseBtn.vue'
 import BookCard from "@/components/BookCard";
 import authorBook from "@/assets/authorBook.png";
 import cardImg from "@/assets/headerBook.png";
+import SectionTitle from "@/components/SectionTitle";
 
 const OrderForm = defineAsyncComponent(() => import('./Base/OrderForm.vue'))
 
@@ -84,4 +85,5 @@ app.component('base-wrapper', BaseWrapper)
 app.component('base-btn', BaseBtn)
 app.component('order-form', OrderForm)
 app.component('book-card', BookCard)
+app.component('section-title', SectionTitle)
 app.mount('#app')
