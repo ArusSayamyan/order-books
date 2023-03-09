@@ -5,6 +5,8 @@
   <order-form></order-form>
   <BookStore/>
   <BookCopy/>
+  <GoalList/>
+  <VisionBlock/>
 </template>
 
 <script>
@@ -13,9 +15,13 @@ import BookList from '../../components/BookList.vue'
 import AboutAuthor from '../../components/AboutAuthor.vue'
 import BookStore from '../../components/BookStore.vue'
 import BookCopy from "@/components/BookCopy";
+import GoalList from "@/components/GoalList";
+import VisionBlock from "@/components/VisionBlock";
 export default {
   name: "HomePage",
   components: {
+    VisionBlock,
+    GoalList,
     BookCopy,
     TheHeader,
     BookList,

@@ -30,6 +30,7 @@ export default {
   display: flex;
   justify-content: space-between;
   padding: 100px 90px;
+  margin-bottom: 120px;
   align-items: center;
 
   &__infoWrapper {
