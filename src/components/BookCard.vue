@@ -1,14 +1,14 @@
 <template>
   <div class="authorBook__card" v-for="item in items" :key="item.id">
     <div class="authorBook__cardImgContent">
-      <img :src="item.bookImg" alt="" class="authorBook__cardImg">
+      <img :src="item.thumbnailUrl" alt="" class="authorBook__cardImg">
     </div>
     <div class="authorBook__bookInfo">
-      <h2 class="authorBook__bookName">{{ item.bookName }}</h2>
+      <h2 class="authorBook__bookName">{{ item.id }}</h2>
       <p class="authorBook__bookPrice">{{ item.bookPrice }}</p>
       <p class="authorBook__bookText">{{ item.bookInfo }}</p>
       <ul class="authorBook__list">
-        <li class="authorBook__listItem">{{ item.bookDesc }}</li>
+        <li class="authorBook__listItem">{{ item.title }}</li>
       </ul>
       <base-btn btnTitle="Order Now" @click="makeShownForm"></base-btn>
     </div>
@@ -17,7 +17,7 @@
 
 <script>
 import {useStore} from "vuex";
-import {computed} from "vue";
+import {computed, onMounted} from "vue";
 
 
 export default {
@@ -28,12 +28,17 @@ export default {
     const makeShownForm = function() {
       store.commit('makeShown', true)
     }
+
     const items = computed(function()  {
       return store.state.cards
     })
+    onMounted(() => {
+     store.dispatch('getNewCard')
+      console.log(items)
+    })
     return {
       makeShownForm,
-      items
+      items,
     }
   }
 }
