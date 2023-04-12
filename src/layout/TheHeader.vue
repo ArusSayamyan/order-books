@@ -58,7 +58,7 @@ export default {
   }
 
   &__openText {
-    font-family: 'Cardo';
+    font-family: 'Cardo', sans-serif;
     font-size: 21px;
     line-height: 36px;
     letter-spacing: 1.2px;
@@ -66,7 +66,7 @@ export default {
   }
 
   &__title {
-    font-family: 'Cardo';
+    font-family: 'Cardo', sans-serif;
     font-size: 64px;
     line-height: 78px;
     letter-spacing: 1.3px;
@@ -89,7 +89,7 @@ export default {
 
   &__readBook {
     margin-left: 50px;
-    font-family: 'Cardo';
+    font-family: 'Cardo', sans-serif;
     font-size: 19px;
     line-height: 30px;
     letter-spacing: 0.38px;
@@ -110,7 +110,7 @@ export default {
   }
 
   &__infoItem {
-    font-family: 'Cardo';
+    font-family: 'Cardo', sans-serif;
     font-size: 24px;
     line-height: 29px;
     letter-spacing: 0.48px;
@@ -131,7 +131,7 @@ export default {
 
   &__infoDesc {
     margin: 7px 0;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-size: 17px;
     line-height: 27px;
     color: #B4C7E7;

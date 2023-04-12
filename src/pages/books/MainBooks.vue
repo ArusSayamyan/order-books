@@ -31,7 +31,6 @@ export default {
   }
 
   &__title {
-    font-family: 'Cardo';
     font-weight: 400;
     font-size: 42px;
     line-height: 50px;
