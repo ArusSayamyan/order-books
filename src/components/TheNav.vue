@@ -4,7 +4,7 @@
       <div class="nav__wrapper">
         <div class="nav__logoWrapper">
           <router-link to="/home" class="nav__homeLink">
-          <img src="../assets/logo.svg" alt="navLogo" class="nav__logo"></router-link>
+            <img src="../assets/logo.svg" alt="navLogo" class="nav__logo"></router-link>
           <router-link to="/home" class="nav__homeLink">
             <span class="nav__name">Pages</span></router-link>
         </div>
@@ -20,16 +20,20 @@
           </a>
         </div>
       </div>
-        <ul class="nav__linkList">
-          <li><router-link to="/home" class="nav__link">Home</router-link></li>
-          <li><router-link to="/about" class="nav__link">About</router-link></li>
-          <li class="nav__link">Pages</li>
-          <li class="nav__link">Contact Link</li>
-          <li class="nav__addProduct"><img src="../assets/bug.svg" alt=""></li>
-          <li>
-            <base-btn btnTitle="Order Today" to="/books" link withBg></base-btn>
-          </li>
-        </ul>
+      <ul class="nav__linkList">
+        <li>
+          <router-link to="/home" class="nav__link">Home</router-link>
+        </li>
+        <li>
+          <router-link to="/about" class="nav__link">About</router-link>
+        </li>
+        <li class="nav__link">Pages</li>
+        <li class="nav__link">Contact Link</li>
+        <li class="nav__addProduct"><img src="../assets/bug.svg" alt=""></li>
+        <li>
+          <base-btn btnTitle="Order Today" to="/books" link withBg></base-btn>
+        </li>
+      </ul>
     </nav>
   </base-wrapper>
 </template>
@@ -38,6 +42,8 @@
 
 export default {
   name: 'TheNav',
+
+
 }
 </script>
 

@@ -12,19 +12,19 @@
 <script>
 import {ref} from "vue";
 
+
 export default {
   name: "BookList",
   components: {},
-
 
   setup() {
     const isShown = ref(false)
 
     return {
-      isShown,
+      isShown
     }
-  }
 
+  }
 }
 </script>
 

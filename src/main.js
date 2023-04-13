@@ -49,6 +49,8 @@ const store = createStore({
         }
     },
     actions: {
+
+        // CREATE NEW ORDER
        async createOrder(context, payload) {
             const newOrder = {
                 id: payload.id,
@@ -72,14 +74,16 @@ const store = createStore({
              await router.push('/success')
 
         },
-        async getNewCard(context) {
+
+        //GET CARD INFO FROM PLACEHOLDER JSON
+
+       async getNewCard(context) {
             const response = await fetch('https://jsonplaceholder.typicode.com/photos', {
                 method: 'GET',
             });
             const responseData = await response.json();
-            console.log(responseData)
 
-            for(let i = 0; i < responseData.length - (responseData.length - 6); i++) {
+            for(let i = 0; i < responseData.length - (responseData.length - 12); i++) {
                 context.commit('addNewBookCard', responseData[i]);
             }
         }
