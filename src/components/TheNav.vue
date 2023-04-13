@@ -52,6 +52,12 @@ export default {
   padding: 22px 70px;
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  background: #1B3764;
+  width: 100%;
+  max-width: 1440px;
+  box-sizing: border-box;
+  z-index: 1;
 
   &__wrapper {
     display: flex;
