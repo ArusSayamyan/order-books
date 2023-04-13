@@ -6,7 +6,6 @@ import HomePage from "./pages/home/HomePage";
 import AboutPage from "./pages/about/AboutPage";
 import MainBooks from './pages/books/MainBooks'
 import SuccessPage from "./components/SuccessPage";
-
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -32,5 +31,6 @@ const router = createRouter({
         },
     ]
 })
+
 
 export default router;

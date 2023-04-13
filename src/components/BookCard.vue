@@ -1,41 +1,46 @@
 <template>
-  <div class="authorBook__card" v-for="item in items" :key="item.id">
-    <div class="authorBook__cardImgContent">
-      <img :src="item.thumbnailUrl" alt="" class="authorBook__cardImg">
+    <div class="authorBook__card" v-for="item in items" :key="item.id">
+      <div class="authorBook__cardImgContent">
+        <img :src="item.thumbnailUrl" alt="" class="authorBook__cardImg">
+      </div>
+      <div class="authorBook__bookInfo">
+        <h2 class="authorBook__bookName">{{ item.id }}</h2>
+        <p class="authorBook__bookPrice">{{ item.bookPrice }}</p>
+        <p class="authorBook__bookText">{{ item.bookInfo }}</p>
+        <ul class="authorBook__list">
+          <li class="authorBook__listItem">{{ item.title }}</li>
+        </ul>
+        <base-btn btnTitle="Order Now" @click="makeShownForm"></base-btn>
+      </div>
     </div>
-    <div class="authorBook__bookInfo">
-      <h2 class="authorBook__bookName">{{ item.id }}</h2>
-      <p class="authorBook__bookPrice">{{ item.bookPrice }}</p>
-      <p class="authorBook__bookText">{{ item.bookInfo }}</p>
-      <ul class="authorBook__list">
-        <li class="authorBook__listItem">{{ item.title }}</li>
-      </ul>
-      <base-btn btnTitle="Order Now" @click="makeShownForm"></base-btn>
-    </div>
-  </div>
 </template>
 
 <script>
 import {useStore} from "vuex";
-import {computed, onMounted} from "vue";
+import {computed} from "vue";
 
 
 export default {
   name: "BookCard",
-  emits:['makeShownForm'],
+  emits: ['makeShownForm'],
+  props: ['isActive'],
   setup() {
     const store = useStore()
-    const makeShownForm = function() {
+
+    let items = computed(function () {
+      return store.state.cards
+    })
+
+    if(window.location.href.includes('home')) {
+      items = items.value.filter(val => val.bookName)
+    }
+    const makeShownForm = function () {
       store.commit('makeShown', true)
     }
 
-    const items = computed(function()  {
-      return store.state.cards
-    })
-    onMounted(() => {
-     store.dispatch('getNewCard')
-      console.log(items)
-    })
+
+
+
     return {
       makeShownForm,
       items,
